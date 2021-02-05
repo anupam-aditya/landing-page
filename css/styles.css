@@ -19,19 +19,19 @@ h1
 
 .coloured-section-1
 {
-  background-color:#f7efea;
+   background-image: linear-gradient(to bottom, #e1eef4, #ecf4f9, rgba(233, 251, 250, 0));
 }
 
 .coloured-section-2
 {
-  background-color: #fff9f5;
+  background-color: rgba(238, 244, 247, 0.62);
   padding: 8% 15% 7% 17%;
   text-align: center;
 }
 
 .section-heading
 {
-  color: #11a01f;
+  color: #005986;
   font-size: 1rem;
   font-weight: 700;
 }
@@ -45,8 +45,8 @@ h1
 
 .section-text
 {
-  color: #425466;
-  font-size: 0.925rem;
+  color: #2e2d2b;;
+  font-size: 1.18rem;
 }
 
 /* NAVIGATION BAR */
@@ -100,18 +100,18 @@ h1
 
 .active-navlink
 {
-  color: #83633f;
+  color: #005986;;
   font-weight: 600;
 }
 
 .active-navlink:hover
 {
-  color:#83633f;
+  color: #005986;
 }
 
 .Navbar-button
 {
-  background-color: #83633f;
+  background-color: #005986;
   border: 0;
   border-radius: 9px;
   color: #ffffff;
@@ -139,13 +139,13 @@ h1
 .input-section
 {
   line-height: 2;
-  padding: 6.3% 10% 17%;
+  padding: 2.3% 10% 17%;
   text-align: left;
 }
 
 .info-collect
 {
-  padding: 16.3% 0 10% 9.7%;
+  padding: 21% 0 10% 9.7%;
 }
 
 .section-p
@@ -167,7 +167,7 @@ h1
 
 .submit-button
 {
-  background-color: #83633f;
+  background-color: #005986;
   border: 0;
   border-radius: 0.5rem;
   color: white;
@@ -179,16 +179,21 @@ h1
 /* INTRODUCTION SECTION */
 .introduction-section
 {
-  padding: 8% 10% 7% 17%;
+  padding: 0 10% 7% 13.5%;
 }
+.introduction-section .first-column
+{
 
+}
 .introduction-heading-1
 {
+  color: #0a2540;
   margin-top: 1rem;
 }
 
 .introduction-text
 {
+  color:#3c3c3c;
   font-size: 2.8rem;
   font-weight: bold;
   line-height: 1;
@@ -218,7 +223,7 @@ h1
 
 .introduction-section-image
 {
-  width: 26.688rem;
+  width:24.229rem;
 }
 
 .introduction-text-1
@@ -248,7 +253,7 @@ h1
 
 .margin-box
 {
-  border-left: 2px dashed #977d59;
+  border-left: 2px dashed #005986;
 }
 
 .feature-inside-heading
@@ -366,7 +371,16 @@ h1
 {
   display: flex;
   flex-direction: column;
-  padding: 7% 5.6% 7% 17%;
+  padding: 0 5.6% 7% 17%;
+}
+.feature-list-heading
+{
+  padding-top: 7%;
+  margin-bottom: 0;
+}
+.feature-list-heading-1
+{
+  padding-bottom:7%;
 }
 
 .detailed-feature-section
@@ -378,6 +392,7 @@ h1
 
 .feature-list-heading, .feature-list-heading-1
 {
+  background-color: rgba(238, 244, 247, 0.62);
   text-align: center;
 }
 
@@ -571,7 +586,7 @@ img {
 }
 .card-footer
 {
-  background-color: #fff9f5;
+  background-color: rgba(199, 231, 241, 0.47);
 }
 
 .card-footer-heading
@@ -619,13 +634,13 @@ span.testimonial-quote
 .accordion-item
 {
   border-bottom: 1px solid #707588;
-  color: #11a01f;
+  color: #005986;;
   padding: 2.4% 0;
 }
 
 .accordion-link
 {
-  color: #11a01f;
+  color: #005986;
   display: flex;
   font-size: 1.5rem;
   font-weight: 500;
@@ -636,7 +651,7 @@ span.testimonial-quote
 
 .accordion-link:hover
 {
-  color: #11a01f;
+  color: #005986;
   text-decoration: none;
 }
 
@@ -669,7 +684,7 @@ span.testimonial-quote
 /* FOOTER SECTION */
 .footer-section
 {
-  background-color: #fff9f5;
+  background-color: #f1f4f5;
   padding: 4% 3%;
 }
 
@@ -761,8 +776,20 @@ span.testimonial-quote
 
 /* MEDIA QUERIES */
 /* MEDIA QUERIES FOR TABLETS */
-@media (max-width: 1502px) and (min-width: 1389px)
+@media (max-width: 1516px) and (min-width: 1389px)
 {
+  .introduction-text
+  {
+    color: #3c3c3c;
+    font-size: 2.6rem;
+    font-weight: bold;
+    line-height: 1;
+  }
+  .section-text
+  {
+    color: #2e2d2b;
+    font-size: 1.08rem;
+  }
   .input-text
   {
     padding: 0.625rem 9rem 0.625rem 0.938rem;
