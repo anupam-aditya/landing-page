@@ -10,26 +10,24 @@ $("a.accordion-link").click(function()
     ichange1 = ".faq-icon-down-"+$(".hiding-property.fa-chevron-down").attr('class').slice(12,13);
     ichange2 = ".accordion-answer-"+$(".hiding-property.fa-chevron-down").attr('class').slice(12,13);
     ichange3 = "."+$(".hiding-property.fa-chevron-down").attr('class').slice(0,13);
-    setTimeout(function()
+    $(ichange2).slideUp(300,function()
     {
       $(ichange1).toggleClass("hiding-property");
       $(ichange2).toggleClass("is-visible");
       $(ichange3).toggleClass("hiding-property");
-    console.log("class toggled");
-  },350);
+     });
   }
   var iconChange1 = ".faq-icon-up-"+$(this).attr("id");
   var iconChange2 = ".faq-icon-down-"+$(this).attr("id");
   var answerDisplay = ".accordion-answer-"+$(this).attr("id");
   if(ichange1!=iconChange2)
   {
-    setTimeout(function()
+    $(answerDisplay).slideDown(300,function()
     {
+      $(answerDisplay).toggleClass("is-visible");
       $(iconChange1).toggleClass("hiding-property");
       $(iconChange2).toggleClass("hiding-property");
-      $(answerDisplay).toggleClass("is-visible");
-    },350);
-    console.log("class toggled");
+    });
   }
 });
 // FAQ SECTION
@@ -64,16 +62,16 @@ $(".get-started-navlink").click(function()
   $(aba).toggleClass("active-link");
 });
 // GET STARTED SECTION
+
+// $(".Navbar__Button .Navbar-button").click(function()
+// {
+//   fetch('D:\DC downloads\Tutorials\[FreeCourseSite.com] Udemy - The Complete 2020 Web Development Bootcamp\Web Development\SaveMoney\waitlist\waitlist-register.html');
+// });
 function classToggle() {
   const navs = document.querySelectorAll('.Navbar__Items')
 
   navs.forEach(nav => nav.classList.toggle('Navbar__ToggleShow'));
 }
-
-$(".Navbar__Button .Navbar-button").click(function()
-{
-  fetch('D:\DC downloads\Tutorials\[FreeCourseSite.com] Udemy - The Complete 2020 Web Development Bootcamp\Web Development\SaveMoney\waitlist\waitlist-register.html');
-});
 
 document.querySelector('.Navbar__Link-toggle')
   .addEventListener('click', classToggle);
@@ -106,3 +104,54 @@ document.querySelector('.Navbar__Link-toggle')
 
   });
 // TESTIMONIAL SECTION
+// API INTEGRATION
+$(".submit-button").click(function(e)
+{
+  e.preventDefault();
+  var emailAddress = $(".input-text").val();
+  var dataValues =
+  {
+    "email": emailAddress,
+    "referee_code": "aQMmmM"
+  };
+  console.log(dataValues);
+    $.ajax({
+      type: 'POST',
+      url: 'http://3.6.181.80:8000/api/v1/iam/waitlist/create-exists/',
+      data: JSON.stringify(dataValues),
+      contentType: 'application/json',
+      success: function(result)
+      {
+          window.location.href = "file:///D:/DC%20downloads/Tutorials/[FreeCourseSite.com]%20Udemy%20-%20The%20Complete%202020%20Web%20Development%20Bootcamp/Web%20Development/SaveMoney/waitlist/waitlist.html";
+      },
+      error: function()
+      {
+        alert("There was a problem registering. Please try again in some time.");
+      }
+    });
+});
+$(".submit-button-1").click(function(e1)
+{
+  e1.preventDefault();
+  var emailAddress1 = $(".input-text-2").val();
+  var dataValues1 =
+  {
+    "email": emailAddress1,
+    "referee_code": "aQMmmM"
+  };
+  console.log(dataValues1);
+    $.ajax({
+      type: 'POST',
+      url: 'https://89b4e45cfe85.ngrok.io/api/v1/iam/waitlist/create-exists/',
+      data: JSON.stringify(dataValues1),
+      contentType: 'application/json',
+      success: function(result)
+      {
+          window.location.href = "file:///D:/DC%20downloads/Tutorials/[FreeCourseSite.com]%20Udemy%20-%20The%20Complete%202020%20Web%20Development%20Bootcamp/Web%20Development/SaveMoney/waitlist/waitlist.html";
+      },
+      error: function()
+      {
+        alert("There was a problem registering. Please try again in some time.");
+      }
+    });
+});
